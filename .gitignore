@@ -1,0 +1,68 @@
+# ==========================================
+# Environments
+# ==========================================
+venv/
+.venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# ==========================================
+# Generated Results, Figures & Plots
+# ==========================================
+*.png
+*.jpg
+*.jpeg
+*.svg
+*.pdf
+*.eps
+
+# Generated analysis / benchmark outputs
+benchmark_3way_*.csv
+benchmark_3way_comparison.png
+sensibilidad_resultados.csv
+analisis_sensibilidad.png
+mpo_rendimientos_*.csv
+mpo_pesos_*.csv
+
+# Output / results directories
+results/
+outputs/
+figures/
+plots/
+
+# ==========================================
+# Cached Data & Large Binary Files
+# ==========================================
+*.npy
+*.npz
+
+# ==========================================
+# Python Bytecode & Cache
+# ==========================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.pytest_cache/
+.coverage
+htmlcov/
+.ipynb_checkpoints/
+
+# ==========================================
+# Editor & OS Files
+# ==========================================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+desktop.ini
+

@@ -1,0 +1,37 @@
+# Core Mathematical & Data Handling
+
+numpy>=1.24.0
+
+pandas>=2.0.0
+
+scipy>=1.10.0
+
+scikit-learn>=1.2.0
+
+
+
+# Market Data Acquisition
+
+yfinance>=0.2.28
+
+requests>=2.28.0
+
+lxml>=4.9.0
+
+
+
+# Convexe Optimization Benchmark Reference
+
+cvxpy>=1.3.0
+
+clarabel>=0.6.0
+
+
+
+# Visualization & Interactive Dashboard
+
+streamlit>=1.25.0
+
+matplotlib>=3.7.0
+
+altair>=5.0.0
