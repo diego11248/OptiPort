@@ -53,7 +53,7 @@ import numpy as np
 from numpy.typing import NDArray
 from scipy.linalg import LinAlgError, cho_factor, cho_solve
 
-from OptiPort.pdipm_qp_solver import QPInputError, QPNumericalError
+from pdipm_qp_solver import QPInputError, QPNumericalError
 
 FloatArray = NDArray[np.float64]
 

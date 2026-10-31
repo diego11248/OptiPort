@@ -17,7 +17,7 @@ venv.bak/
 *.svg
 *.pdf
 *.eps
-
+*.csv
 # Generated analysis / benchmark outputs
 benchmark_3way_*.csv
 benchmark_3way_comparison.png

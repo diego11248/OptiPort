@@ -10,10 +10,10 @@ import numpy as np
 import pandas as pd
 from sklearn.covariance import ledoit_wolf
 
-import OptiPort.dataset
+import dataset
 from backtest_engine import compute_metrics, load_market_data, make_solver, run_backtest
-from OptiPort.pdipm_portfolio import PortfolioQPSolver
-from OptiPort.pdipm_qp_solver import PrimalDualQPSolver, build_portfolio_qp
+from pdipm_portfolio import PortfolioQPSolver
+from pdipm_qp_solver import PrimalDualQPSolver, build_portfolio_qp
 
 
 def random_cov(rng, N, T=252, k=3):

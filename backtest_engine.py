@@ -32,8 +32,8 @@ from numpy.typing import ArrayLike, NDArray
 from sklearn.covariance import ledoit_wolf
 
 import config
-from OptiPort.pdipm_portfolio import PortfolioQPSolver
-from OptiPort.pdipm_qp_solver import (PrimalDualQPSolver, QPNumericalError,
+from pdipm_portfolio import PortfolioQPSolver
+from pdipm_qp_solver import (PrimalDualQPSolver, QPNumericalError,
                              build_portfolio_qp)
 
 FloatArray = NDArray[np.float64]
