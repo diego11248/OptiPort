@@ -2,6 +2,7 @@
     python test_structured.py            # rápido (N<=60 y un mini-universo sintético de N=120)
     python test_structured.py --big      # añade un backtest sintético de N=500
 """
+import gc
 import sys
 import tempfile
 from pathlib import Path
@@ -11,7 +12,8 @@ import pandas as pd
 from sklearn.covariance import ledoit_wolf
 
 import dataset
-from backtest_engine import compute_metrics, load_market_data, make_solver, run_backtest
+from backtest_engine import (_open_cov_cache, compute_metrics, load_market_data, make_solver,
+                             run_backtest)
 from pdipm_portfolio import PortfolioQPSolver
 from pdipm_qp_solver import PrimalDualQPSolver, build_portfolio_qp
 
@@ -118,6 +120,10 @@ def test_pipeline(N, T_total):
         assert abs(g[0.02] - g[1.0]) < 3 * se, f"posible look-ahead: {g}"
         print(f"OK  backtest N={N}: retorno bruto anual L=0.02 → {g[0.02]:+.3f}, L=1.0 → {g[1.0]:+.3f} "
               f"(SE≈{se:.3f}); iteraciones medias {res[0.02].iterations[res[0.02].iterations > 0].mean():.1f}")
+        # En Windows no se puede borrar un archivo abierto: cerrar el memmap del caché antes de
+        # que TemporaryDirectory elimine la carpeta.
+        _open_cov_cache.cache_clear()
+        gc.collect()
 
 
 if __name__ == "__main__":
